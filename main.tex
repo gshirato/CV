@@ -1,0 +1,74 @@
+% 
+% TODO:
+% 1. Integrate biber/bibtex for article citation under publications.
+% 2. Figure out a smoother way for the document to flow onto the next page.
+% 3. Add styling information for a "Projects/Hacks" section.
+% 4. Add location/address information
+% 5. Merge OpenFont and MacFonts as a single sty with options.
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% CHANGELOG:
+% v1.1:
+% 1. Fixed several compilation bugs with \renewcommand
+% 2. Got Open-source fonts (Windows/Linux support)
+% 3. Added Last Updated
+% 4. Move Title styling into .sty
+% 5. Commented .sty file.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Known Issues:
+% 1. Overflows onto second page if any column's contents are more than the
+% vertical limit
+% 2. Hacky space on the first bullet point on the second column.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[]{deedy-resume-openfont}
+
+
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     LAST UPDATED DATE
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \lastupdated
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     TITLE NAME
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\namesection{Gota}{SHIRATO}{
+Peter-Ohlenhardt-Straße 8, 53127, Bonn
+\faEnvelope\href{mailto:gota@hey.com}{gota@hey.com} \\ \faPhone +49 171 848 5796 
+\faGithub Github: \href{https://github.com/gshirato}{\custombold{github.com/gshirato}} 
+\faLinkedinSquare Linkedin:\href{https://www.linkedin.com/in/gota-shirato-115756125/}{\custombold{gota-shirato-115756125}}
+%\faTwitter @holokeum\\
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     PURPOSE
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% \noindent\makebox[\linewidth]{\rule{\paperwidth}{0.4pt}}
+% \centering{
+% Currently seeking a freelance job in the Tokyo area }\\
+
+}
+
+\sectionsep 
+
+\input{parts/education}
+\input{parts/professional-experience}
+\input{parts/awards}
+\input{parts/skills}
+
+
+\end{document}  \documentclass[]{article}
